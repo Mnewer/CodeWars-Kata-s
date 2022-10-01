@@ -492,17 +492,19 @@ function isPrime(num) {
   for (let i = 1; i <= num; i++) {
     numArray.push(i);
   }
-  console.log(numArray);
   for (let i = 0; i <= numArray.length; i++) {
-    if (numArray[i] % num === 1 || numArray[i] % num === 1) {
-      console.log(numArray[i]);
+    if (num % numArray[i] == 0) {
       result.push(numArray[i]);
     }
   }
+  if (result.length > 2 || num < 2) {
+    return false;
+  } else return true;
 }
 
-// console.log(isPrime(0)); //false
-// console.log(isPrime(1)); //false
-// console.log(isPrime(45)); //false
+console.log(isPrime(0)); //false
+console.log(isPrime(-1)); //false
+console.log(isPrime(45)); //false
 console.log(isPrime(73)); //true
 console.log(isPrime(75)); //false
+console.log(isPrime(5999)); //false
