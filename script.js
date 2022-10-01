@@ -465,9 +465,9 @@ function correct(string) {
   return string.replaceAll("0", "O").replaceAll("5", "S").replaceAll("1", "I");
 }
 
-// console.log(correct("L0ND0N"));
-// console.log(correct("DUBL1N"));
-// console.log(correct("PAR15"));
+console.log(correct("L0ND0N"));
+console.log(correct("DUBL1N"));
+console.log(correct("PAR15"));
 
 /*********************************************************
 **********************************************************
@@ -502,9 +502,9 @@ function isPrime(num) {
   } else return true;
 }
 
-console.log(isPrime(0)); //false
-console.log(isPrime(-1)); //false
-console.log(isPrime(45)); //false
-console.log(isPrime(73)); //true
-console.log(isPrime(75)); //false
-console.log(isPrime(5999)); //false
+// console.log(isPrime(0)); //false
+// console.log(isPrime(-1)); //false
+// console.log(isPrime(45)); //false
+// console.log(isPrime(73)); //true
+// console.log(isPrime(75)); //false
+// console.log(isPrime(5999)); //false
