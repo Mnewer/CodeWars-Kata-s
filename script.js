@@ -460,14 +460,17 @@ Correct the mistakes of the character recognition software
 //     I is misinterpreted as 1
 
 // The test cases contain numbers only by mistake.
-//TODO: Need to get this working
 function correct(string) {
-  return string.replaceAll("0", "O").replaceAll("5", "S").replaceAll("1", "I");
+  return string.split(0).join("O").split(1).join("I").split(5).join("S");
 }
 
 console.log(correct("L0ND0N"));
 console.log(correct("DUBL1N"));
 console.log(correct("PAR15"));
+
+// const a = "::::::";
+// const replaced = a.replace(/:/g, "hi");
+// console.log(replaced);
 
 /*********************************************************
 **********************************************************
