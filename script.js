@@ -489,6 +489,11 @@ console.log(correct("PAR15"));
 //     You can not assume that the integer will be only positive. You may be given negative numbers as well ( or 0 ).
 //     NOTE on performance: There are no fancy optimizations required, but still the most trivial solutions might time out. Numbers go up to 2^31 ( or similar, depending on language ). Looping all the way up to n, or n/2, will be too slow.
 
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//First try
+/*
 function isPrime(num) {
   let numArray = [];
   let result = [];
@@ -504,6 +509,41 @@ function isPrime(num) {
     return false;
   } else return true;
 }
+*/
+
+//Solution found on : https://www.programiz.com/javascript/examples/prime-number
+function isPrime(num) {
+  let isPrime = true;
+
+  //Check if number is equal to 1:
+  if (num === 1) {
+    return false;
+  }
+  //Check if number is greater than 1:
+  else if (num > 1) {
+    for (let i = 2; i < num; i++) {
+      if (num % i == 0) {
+        isPrime = false;
+        break;
+      }
+    }
+    //If number is prime:
+    if (isPrime) {
+      return true;
+    }
+    //If number is not prime:
+    else {
+      return false;
+    }
+  }
+  //check if number is less than 1:
+  else {
+    return false;
+  }
+}
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
 
 // console.log(isPrime(0)); //false
 // console.log(isPrime(-1)); //false
