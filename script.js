@@ -460,13 +460,13 @@ Correct the mistakes of the character recognition software
 //     I is misinterpreted as 1
 
 // The test cases contain numbers only by mistake.
-function correct(string) {
+/*function correct(string) {
   return string.split(0).join("O").split(1).join("I").split(5).join("S");
-}
-
-console.log(correct("L0ND0N"));
-console.log(correct("DUBL1N"));
-console.log(correct("PAR15"));
+// }
+*/
+// console.log(correct("L0ND0N"));
+// console.log(correct("DUBL1N"));
+// console.log(correct("PAR15"));
 
 // const a = "::::::";
 // const replaced = a.replace(/:/g, "hi");
@@ -513,34 +513,20 @@ function isPrime(num) {
 
 //Solution found on : https://www.programiz.com/javascript/examples/prime-number
 function isPrime(num) {
-  let isPrime = true;
-
-  //Check if number is equal to 1:
-  if (num === 1) {
+  //If num == 1 or < it's not a prime:
+  if (num < 2) {
     return false;
   }
-  //Check if number is greater than 1:
-  else if (num > 1) {
-    for (let i = 2; i < num; i++) {
-      if (num % i == 0) {
-        isPrime = false;
-        break;
-      }
-    }
-    //If number is prime:
-    if (isPrime) {
-      return true;
-    }
-    //If number is not prime:
-    else {
+  //If number is greater than 1:
+  for (let i = 2; i < num; i++) {
+    if (num % i == 0) {
       return false;
     }
   }
-  //check if number is less than 1:
-  else {
-    return false;
-  }
+  //If number is prime:
+  return true;
 }
+
 //////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////
@@ -551,3 +537,35 @@ function isPrime(num) {
 // console.log(isPrime(73)); //true
 // console.log(isPrime(75)); //false
 // console.log(isPrime(5999)); //false
+// console.log("eeeeeeeeeeeeee");
+// console.log(isPrime(592222)); //false
+
+/*********************************************************
+**********************************************************
+-----------------------Name shuffler----------------------
+**********************************************************
+*********************************************************/
+// Write a function that returns a string in which firstname is swapped with last name.
+/*
+function nameShuffler(str) {
+  return str.split(" ").reverse().join(" ");
+}
+*/
+// nameShuffler("Jan Odvar");
+
+/*********************************************************
+**********************************************************
+-----------------------Return Negative--------------------
+**********************************************************
+*********************************************************/
+/*
+function makeNegative(num) {
+  if (num <= 0) return num;
+  if (num > 0) return -num;
+}
+*/
+
+// console.log(makeNegative(1));
+// console.log(makeNegative(50));
+// console.log(makeNegative(-0.3));
+// console.log(makeNegative(-5));
