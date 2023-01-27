@@ -569,3 +569,85 @@ function makeNegative(num) {
 // console.log(makeNegative(50));
 // console.log(makeNegative(-0.3));
 // console.log(makeNegative(-5));
+
+/*********************************************************
+**********************************************************
+-----------------------Powers of 2------------------------
+**********************************************************
+*********************************************************/
+
+// Complete the function that takes a non-negative integer n as input,
+// and returns a list of all the powers of 2 with the exponent ranging from 0 to n ( inclusive ).
+
+// function powersOfTwo(n) {
+//   const range = [...Array(n + 1).keys()];
+//   let result = [];
+//   range.forEach((element) => {
+//     if (element == 0) {
+//       result.push(1);
+//     } else {
+//       result.push(Math.pow(2, element));
+//     }
+//   });
+//   return result;
+// }
+
+// console.log(powersOfTwo(1));
+
+/*********************************************************
+**********************************************************
+---------------Abbreviate a Two Word Name-----------------
+**********************************************************
+*********************************************************/
+
+// Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+// The output should be two capital letters with a dot separating them.
+// It should look like this:
+// Sam Harris => S.H
+// patrick feeney => P.F
+
+// function abbrevName(name) {
+//   return name
+//     .toUpperCase()
+//     .split(" ")
+//     .map((word) => word.charAt(0))
+//     .join(".");
+// }
+// console.log(abbrevName("Sam Harris"));
+/*********************************************************
+**********************************************************
+--------------------Find the stray number-----------------
+**********************************************************
+*********************************************************/
+// You are given an odd-length array of integers, in which all of them are the same, except for one single number.
+// Complete the method which accepts such an array, and returns that single different number.
+// The input array will always be valid! (odd-length >= 3)
+
+// function stray(numbers) {
+//   //take first element
+//   let strayChar = numbers[0];
+
+//   // see if it is different from the next 2
+//   if (strayChar !== numbers[1] && strayChar !== numbers[2]) return strayChar;
+
+//   // if not find the first value that is different
+//   for (let i = 1; i < numbers.length; i++) {
+//     if (strayChar !== numbers[i]) return numbers[i];
+//   }
+// }
+
+// console.log(stray([1, 1, 2]));
+// console.log(stray([1, 2, 1]));
+// console.log(stray([2, 1, 1]));
+
+// function solution(nums) {
+//   if (nums == null) {
+//     return (nums = []);
+//   } else {
+//     return nums.sort(function (a, b) {
+//       return a - b;
+//     });
+//   }
+// }
+// console.log(solution([1, 2, 3, 10, 5]));
+// console.log(solution([]));
